@@ -71,16 +71,20 @@
 * no space around the = sign
 * cannot start with a number
 
+
 #### Using variable values:
 >echo $myvar<br>
 >echo ${myvar}<br>
 >echo "{myvar}_something"
 
+
 #### Removing variables:
 >unset myvar
 
+
 #### Removing the value of the variable
 >myvar=
+
 
 #### Test if a variable is set:
 >[[ -v myvar]]<br>
@@ -88,6 +92,7 @@
 *   Return codes:
     * 0 : success (variable myvar is set)
     * 1 : failure (variable myvar is not set)
+
 
 #### Substitute default value:
 >echo ${myvar:="default text here"}
@@ -98,4 +103,63 @@
     >&emsp;display "default text here"
 
 
-####
+#### List of variable names:
+>echo ${!H*}
+* List of names of shell variables starting with 'H'
+
+
+#### Length of string:
+>echo ${#myvar}
+* it will display the length of the string
+* myvar is not set then display 0
+
+
+#### Slicing strings:
+>echo ${myvar:5:4}<br>
+>eg : myvar="rishabh"
+>&emsp; echo ${myvar:5:4}<br>
+>O/P : bh
+* starting at index 5
+* display next 4 characters
+
+
+#### Remove matching pattern:
+>echo ${myvar#pattern}
+* match once
+>echo ${myvar##pattern}
+* match max possible
+
+
+#### Keep matching pattern:
+>echo ${myvar%pattern}
+* match once
+>echo ${myvar%%pattern}
+* match max possible
+
+
+#### Replace matching pattern:
+>echo ${myvar/pattern/string}
+* match once and replace with the string
+>echo ${myvar//pattern/string}
+* match max possible and replace with string
+
+
+#### Replace matching pattern by location:
+>echo ${myvar/#pattern/string}
+* match at beginning and replace with string
+>echo ${myvar//pattern/string}
+* match at end and replace with string
+
+
+#### Changing case of a string variable:
+>echo ${myvar,}
+* change first char to lower case
+>echo ${myvar,,}
+* change all chars to lower case
+>echo ${myvar^}
+* change first char to upper case
+>echo ${myvar^^}
+* change all chars to upper case
+
+
+#### 
