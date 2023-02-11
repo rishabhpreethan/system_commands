@@ -263,11 +263,11 @@ declare +r myvar
 
 
 ### Indexing arrays
-> indexing of the array doesnt have to be contiguous
+* indexing of the array doesnt have to be contiguous
 ```
 declare -a arr
 ```
->declare as an indexed array
+* declare as an indexed array
 ```
 $arr[0]="value"
 ```
@@ -279,7 +279,7 @@ echo ${arr[0]}
 ```
 echo ${#arr[@]}
 ```
->length of the array
+* length of the array
 ```
 echo ${!arr[@]}
 ```
@@ -287,45 +287,59 @@ echo ${!arr[@]}
 ```
 echo ${arr[@]}
 ```
->display values of all elements
+* display values of all elements
+<br>
+
 ```
 unset 'arr[2]'
 ```
->delete element with index 2
+<br>
+
+* delete element with index 2
 ```
 arr+=("value")
 ```
->append an element with "value" to the end of the array
+* append an element with "value" to the end of the array
 
 
 ### Associative arrays(Hashmap):
-* index can be of any datatype
+* index can be of any datatype<br>
 ```
 decalare -A hash
 ```
 * declare hash as an associative array
+<br>
 
 ```
 $hash["a"]="value"
 ```
 * set value of element with index as "a"
+<br>
 
 ```
 echo ${hash["a"]}
 ```
 * value of element with index "a"
+<br>
+
 ```
 echo ${#hash[@]}
 ```
 * number of elements
+<br>
+
 ```
 echo ${!hash[@]}
 ```
 * display all indices used
+<br>
+
 ```
 echo ${hash[@]}
 ```
 * display all values of the elements
+<br>
+
 ```
 unset 'hash["a"]'
 ```
