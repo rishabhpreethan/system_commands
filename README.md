@@ -72,8 +72,8 @@
 * cannot start with a number
 
 #### Using variable values:
->echo $myvar
->echo ${myvar}
+>echo $myvar<br>
+>echo ${myvar}<br>
 >echo "{myvar}_something"
 
 #### Removing variables:
@@ -83,7 +83,7 @@
 >myvar=
 
 #### Test if a variable is set:
->[[ -v myvar]]
+>[[ -v myvar]]<br>
 >echo$?
 *   Return codes:
     * 0 : success (variable myvar is set)
@@ -92,7 +92,10 @@
 #### Substitute default value:
 >echo ${myvar:="default text here"}
 * Also the same as:
-    >if myvar is set:
-    >   display the value
-    >else:
+    >if myvar is set:<br>
+    >   display the value<br>
+    >else:<br>
     >   display "default text here"
+
+
+####
