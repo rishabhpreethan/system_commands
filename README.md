@@ -93,9 +93,9 @@
 >echo ${myvar:="default text here"}
 * Also the same as:
     >if myvar is set:<br>
-    ><t>display the value<br>
+    >&emsp;display the value<br>
     >else:<br>
-    ><t>display "default text here"
+    >&emsp;display "default text here"
 
 
 ####
