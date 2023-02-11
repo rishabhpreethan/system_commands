@@ -1,5 +1,5 @@
-print strings to screen:
-    echo hello world
+-print strings to screen:
+>echo hello world
 
-print values of variables:
-    echo $HOME
+-print values of variables:
+>echo $HOME
