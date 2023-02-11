@@ -99,6 +99,12 @@
     >&emsp;display the value<br>
     >else:<br>
     >&emsp;display "default text here"
+    ```
+    if myvar is set:
+        display the value
+    else:
+        display "default text here"
+    ```
 <br>
 
 ### List of variable names:
