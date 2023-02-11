@@ -81,12 +81,14 @@
 <br>
 
 ### Removing the value of the variable
->myvar=
+```myvar=```
 <br>
 
 ### Test if a variable is set:
->[[ -v myvar]]<br>
->echo$?
+```
+[[ -v myvar]]
+echo$?
+```
 *   Return codes:
     * 0 : success (variable myvar is set)
     * 1 : failure (variable myvar is not set)
