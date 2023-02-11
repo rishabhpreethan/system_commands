@@ -12,11 +12,15 @@
 <br>
 
 ### Print strings to screen:
-> echo hello world
+```
+echo hello world
+```
 <br>
 
 ### Print values of variables:
-> echo $HOME
+```
+echo $HOME
+```
 <br>
 
 ### Frequently used shell variables:
@@ -71,17 +75,23 @@
 <br>
 
 ### Using variable values:
->echo $myvar<br>
->echo ${myvar}<br>
->echo "{myvar}_something"
+```
+echo $myvar
+echo ${myvar}
+echo "{myvar}_something"
+```
 <br>
 
 ### Removing variables:
->unset myvar
+```
+unset myvar
+```
 <br>
 
 ### Removing the value of the variable
-```myvar=```
+```
+myvar=
+```
 <br>
 
 ### Test if a variable is set:
@@ -95,76 +105,110 @@ echo$?
 <br>
 
 ### Substitute default value:
->echo ${myvar:="default text here"}
+```
+echo ${myvar:="default text here"}
+```
 * Also the same as:
-    >if myvar is set:<br>
-    >&emsp;display the value<br>
-    >else:<br>
-    >&emsp;display "default text here"
-    ```
-    if myvar is set:
-        display the value
-    else:
-        display "default text here"
-    ```
+```
+if myvar is set:
+    display the value
+else:
+    display "default text here"
+```
 <br>
 
 ### List of variable names:
->echo ${!H*}
+```
+echo ${!H*}
+```
 * List of names of shell variables starting with 'H'
 <br>
 
 ### Length of string:
->echo ${#myvar}
+```
+echo ${#myvar}
+```
 * it will display the length of the string
 * myvar is not set then display 0
 <br>
 
 ### Slicing strings:
->echo ${myvar:5:4}<br>
->eg : myvar="rishabh"
->&emsp; echo ${myvar:5:4}<br>
->O/P : bh
+```
+echo ${myvar:5:4}
+```
+```
+eg : 
+myvar="rishabh"
+echo ${myvar:5:4}
+```
+```
+O/P : 
+bh
+```
 * starting at index 5
 * display next 4 characters
 <br>
 
 ### Remove matching pattern:
->echo ${myvar#pattern}
+```
+echo ${myvar#pattern}
+```
 * match once
->echo ${myvar##pattern}
+```
+echo ${myvar##pattern}
+```
 * match max possible
 <br>
 
 ### Keep matching pattern:
->echo ${myvar%pattern}
+```
+echo ${myvar%pattern}
+```
 * match once
->echo ${myvar%%pattern}
+```
+echo ${myvar%%pattern}
+```
 * match max possible
 <br>
 
 ### Replace matching pattern:
->echo ${myvar/pattern/string}
+```
+echo ${myvar/pattern/string}
+```
 * match once and replace with the string
->echo ${myvar//pattern/string}
+```
+echo ${myvar//pattern/string}
+```
 * match max possible and replace with string
 <br>
 
 ### Replace matching pattern by location:
->echo ${myvar/#pattern/string}
+```
+echo ${myvar/#pattern/string}
+```
 * match at beginning and replace with string
->echo ${myvar//pattern/string}
+```
+echo ${myvar//pattern/string}
+```
 * match at end and replace with string
 <br>
 
 ### Changing case of a string variable:
->echo ${myvar,}
+```
+echo ${myvar,}
+```
 * change first char to lower case
->echo ${myvar,,}
+```
+echo ${myvar,,}
+```
 * change all chars to lower case
->echo ${myvar^}
+```
+echo ${myvar^}
+```
 * change first char to upper case
->echo ${myvar^^}
+```
+echo ${myvar^^}
+```
 * change all chars to upper case
 <br>
 
