@@ -304,10 +304,12 @@ arr+=("value")
 decalare -A hash
 ```
 * declare hash as an associative array
+
 ```
 $hash["a"]="value"
 ```
 * set value of element with index as "a"
+
 ```
 echo ${hash["a"]}
 ```
