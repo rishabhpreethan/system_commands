@@ -1,4 +1,4 @@
-# Basics of system commands
+# Notes
 
 
 
@@ -55,7 +55,7 @@
 * 137 : processes killed using (kill -9 <pid>)
 
 
-##### Flags set in bash(echo $-):
+#### Flags set in bash(echo $-):
 * h : locate and hash commands
 * B : brace expansion enabled
 * i : interactive mode
@@ -63,3 +63,10 @@
 * H : ! style history substitution enabled
 * s : commands are read from stdin
 * c : commands are read from arguments
+
+
+#### Creating a variable:
+>eg : myvar="value"
+* can mix alpha-numeric characters
+* no space around the = sign
+* cannot start with a number
