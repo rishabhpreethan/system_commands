@@ -70,3 +70,29 @@
 * can mix alpha-numeric characters
 * no space around the = sign
 * cannot start with a number
+
+#### Using variable values:
+>echo $myvar
+>echo ${myvar}
+>echo "{myvar}_something"
+
+#### Removing variables:
+>unset myvar
+
+#### Removing the value of the variable
+>myvar=
+
+#### Test if a variable is set:
+>[[ -v myvar]]
+>echo$?
+*   Return codes:
+    * 0 : success (variable myvar is set)
+    * 1 : failure (variable myvar is not set)
+
+#### Substitute default value:
+>echo ${myvar:="default text here"}
+* Also the same as:
+    >if myvar is set:
+    >   display the value
+    >else:
+    >   display "default text here"
