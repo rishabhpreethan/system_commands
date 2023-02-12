@@ -264,26 +264,38 @@ declare +r myvar
 
 ### Indexing arrays
 * indexing of the array doesnt have to be contiguous
+<br>
+
 ```
 declare -a arr
 ```
 * declare as an indexed array
+<br>
+
 ```
 $arr[0]="value"
 ```
 * set value of element with index 0 in the array
+<br>
+
 ```
 echo ${arr[0]}
 ```
 * display value of element with index 0
+<br>
+
 ```
 echo ${#arr[@]}
 ```
 * length of the array
+<br>
+
 ```
 echo ${!arr[@]}
 ```
 * display all indices used
+<br>
+
 ```
 echo ${arr[@]}
 ```
@@ -293,9 +305,9 @@ echo ${arr[@]}
 ```
 unset 'arr[2]'
 ```
+* delete element with index 2
 <br>
 
-* delete element with index 2
 ```
 arr+=("value")
 ```
@@ -346,3 +358,6 @@ echo ${hash[@]}
 unset 'hash["a"]'
 ```
 * delete element with index "a"
+
+
+### 
