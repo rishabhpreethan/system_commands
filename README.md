@@ -303,7 +303,9 @@ arr+=("value")
 
 
 ### Associative arrays(Hashmap):
-* index can be of any datatype<br>
+* index can be of any datatype
+<br>
+
 ```
 decalare -A hash
 ```
