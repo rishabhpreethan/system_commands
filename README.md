@@ -363,9 +363,26 @@ unset 'hash["a"]'
 ### Executing multiple commands
 >commandl; command2; command3;
 * Each command will be executed one after other
+<br>
 
 >command1 && command2
 * command2 will be executed only if command1 succeeds
+<br>
 
 >command1 || command2
 * command2 will not be executed if command1 succeeds
+
+
+### Running commands in subshells :
+```
+(ls; echo $BASH_SUBSHELL; (date; echo $BASH_SUBSHELL))
+
+O/P :
+# list of all directories
+1                  # first subshell
+Wednesday 15 February 2023 4:57:01 AM IST           #date
+2                  # second subshell
+```
+
+### File descriptors :
+<img src="/Users/rishabh/Desktop/Screenshot 2023-02-15 at 4.59.14 PM.png" width="350" title="File descriptors">
