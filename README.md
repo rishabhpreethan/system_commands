@@ -248,6 +248,7 @@ decalre -u myvar
 declare -r myvar
 ```
 * variable is read only
+<br>
 
 
 ### Remove restrinctions:
@@ -260,6 +261,7 @@ decalre +u myvar
 declare +r myvar
 ```
 * cant do this once it is read only
+<br>
 
 
 ### Indexing arrays
@@ -358,7 +360,7 @@ echo ${hash[@]}
 unset 'hash["a"]'
 ```
 * delete element with index "a"
-
+<br>
 
 ### Executing multiple commands
 >commandl; command2; command3;
@@ -371,7 +373,7 @@ unset 'hash["a"]'
 
 >command1 || command2
 * command2 will not be executed if command1 succeeds
-
+<br>
 
 ### Running commands in subshells :
 ```
@@ -383,6 +385,7 @@ O/P :
 Wednesday 15 February 2023 4:57:01 AM IST           #date
 2                  # second subshell
 ```
+<br>
 
 ### File descriptors :
-<img src="/Users/rishabh/Desktop/Screenshot 2023-02-15 at 4.59.14 PM.png" width="350" title="File descriptors">
+<img src="/Users/rishabh/Desktop/Screenshot 2023-02-15 at 4.59.14 PM.png" alt="File Descriptors" width="350" title="File descriptors">
