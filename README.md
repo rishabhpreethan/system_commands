@@ -360,4 +360,12 @@ unset 'hash["a"]'
 * delete element with index "a"
 
 
-### 
+### Executing multiple commands
+>commandl; command2; command3;
+* Each command will be executed one after other
+
+>command1 && command2
+* command2 will be executed only if command1 succeeds
+
+>command1 || command2
+* command2 will not be executed if command1 succeeds
