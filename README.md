@@ -411,7 +411,7 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 > command 2> file1
 <img src="/images/combining_commands3.png?raw=true" width="800" height="400">
 
-* used to store the error message into the file
+* used to store the error message into file1
 * contents of file1 will be overwritten
 * new file1 created if it does not exist
 <br>
@@ -424,3 +424,13 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 
 > command < file1
 <img src="/images/<.png?raw=true" width="800" height="400">
+<br>
+
+> command > file1 2>&1
+<img src="/images/redirections1.png?raw=true" width="800" height="400">
+
+* contents of file1 will be overwritten
+
+#### Pipe
+> command1 | command2
+<img src="/images/|.png?raw=true" width="800" height="400">
