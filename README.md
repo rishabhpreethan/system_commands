@@ -418,8 +418,6 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 
 > command > file1 2> file2
 <img src="/images/combining_commands1.png?raw=true" width="800" height="400">
-
-* contents of file1 and file2 will be overwritten
 <br>
 
 > command < file1
@@ -428,9 +426,58 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 
 > command > file1 2>&1
 <img src="/images/redirections1.png?raw=true" width="800" height="400">
-
-* contents of file1 will be overwritten
+<br>
 
 #### Pipe
 > command1 | command2
 <img src="/images/|.png?raw=true" width="800" height="400">
+<br>
+
+> command1 | command2 > file1
+<img src="/images/|>.png?raw=true" width="800" height="400">
+
+* contents of file1 will be overwritten
+<br>
+
+> /dev/null
+* a sink for output to be discarded
+* use : silent and clean scripts
+<br>
+
+> command > file1 2> /dev/null
+<img src="/images/redirections2.png?raw=true" width="800" height="400">
+<br>
+
+>command | tee file1
+<img src="/images/tee.png?raw=true" width="800" height="400">
+<br>
+
+### Package types
+<img src="/images/package_types.png?raw=true" width="800" height="400">
+<br>
+
+### Type of os
+> lsb_release -a
+<br>
+
+### Type of kernel
+> uname -a
+<br>
+
+### Inquiring package db
+* Search packages for a keyword:
+> apt-cache search keyword
+* List all packages:
+> apt-cache pkgnames
+* Display package records of a package:
+> apt-cache show -a package
+<br>
+
+### Package priorities
+* required: essential to proper functioning of the system
+* important : provides functionality that enables the system to run well
+* standard : included in a standard system installation
+* optional : can omit if you do not have enough storage
+* extra : could conflict with packages with higher priority, has specialized requirements, install only if needed
+<br>
+
