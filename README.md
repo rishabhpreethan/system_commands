@@ -388,4 +388,4 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <br>
 
 ### File descriptors :
-<img src="/images/file_descriptors.png?raw=true" alt="File Descriptors" width="400" height="500" title="File descriptors">
+<img src="/images/file_descriptors.png?raw=true" alt="File Descriptors" width="800" height="400" title="File descriptors">
