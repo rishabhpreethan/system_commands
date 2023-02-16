@@ -402,6 +402,7 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <br>
 
 > command >> file1
+
 <img scr="/image/combining_commands2.png?raw=true" width="800" height="400">
 
 * contents will be appended to file1 (bottom of the file)
@@ -409,6 +410,7 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <br>
 
 > command 2> file1
+
 <img scr="/image/combining_commands3.png?raw=true" width="800" height="400">
 
 * used to store the error message into the file
@@ -417,5 +419,6 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <br>
 
 > command > file1 2> file2
+
 <img scr="/image/combining_commands1.png?raw=true" width="800" height="400">
 
