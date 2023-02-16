@@ -402,7 +402,8 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <br>
 
 > command >> file1
-<img scr="/images/combining_commands2.png?raw=true" width="800" height="400">
+<img src="/images/combining_commands2.png?raw=true" width="800" height="400">
+<br>
 * contents will be appended to file1 (bottom of the file)
 * file1 will be created it it does not exist
 <br>
