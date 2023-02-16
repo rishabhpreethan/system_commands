@@ -362,6 +362,9 @@ unset 'hash["a"]'
 * delete element with index "a"
 <br>
 
+# Week 3
+<br>
+
 ### Executing multiple commands
 >commandl; command2; command3;
 * Each command will be executed one after other
@@ -389,3 +392,26 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 
 ### File descriptors :
 <img src="/images/file_descriptors.png?raw=true" alt="File Descriptors" width="800" height="400" title="File descriptors">
+<br>
+
+
+### Combining commands :
+> command > file1
+* contents of file1 will be overwritten 
+* new file1 will be created if it does not exist
+<br>
+
+> command >> file1
+* contents will be appended to file1 (bottom of the file)
+* file1 will be created it it does not exist
+<br>
+
+> command 2> file1
+* used to store the error message into the file
+* contents of file1 will be overwritten
+* new file1 created if it does not exist
+<br>
+
+> command > file1 2> file2
+<img scr="/image/combining_commands1.png?raw=true" width="800" height="400">
+
