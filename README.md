@@ -457,20 +457,30 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <br>
 
 ### Type of os
-> lsb_release -a
+```
+lsb_release -a
+```
 <br>
 
 ### Type of kernel
-> uname -a
+```
+uname -a
+```
 <br>
 
 ### Inquiring package db
 * Search packages for a keyword:
-> apt-cache search keyword
+```
+apt-cache search keyword
+```
 * List all packages:
-> apt-cache pkgnames
+```
+apt-cache pkgnames
+```
 * Display package records of a package:
-> apt-cache show -a package
+```
+apt-cache show -a package
+```
 <br>
 
 ### Package priorities
