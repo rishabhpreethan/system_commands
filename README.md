@@ -509,3 +509,17 @@ apt-cache show -a package
 * ^ : Anchor for beginning of line or negation of enclosed characters
 * $ : Anchor for end of line
 * \ : Escape special characters
+<br>
+
+
+### Special characters (BRE)
+* \{n,m\} : Range of occurances of preceding pattern at least n and utmost m times
+* \( \) : Grouping of regular expressions
+<be>
+
+### Special characters (ERE)
+* {n,m} : Range of occurances of preceding pattern at least n and utmost m times
+* () : Grouping of regular expressions
+* + : One or more of preceding character / expression
+* ? : Zero or one of preceding character / expression
+* | : Logical OR over the patterns
