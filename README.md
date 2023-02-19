@@ -515,7 +515,8 @@ apt-cache show -a package
 ### Special characters (BRE)
 * \{n,m\} : Range of occurances of preceding pattern at least n and utmost m times
 * \( \) : Grouping of regular expressions
-<be>
+<br>
+
 
 ### Special characters (ERE)
 * {n,m} : Range of occurances of preceding pattern at least n and utmost m times
@@ -523,3 +524,19 @@ apt-cache show -a package
 * + : One or more of preceding character / expression
 * ? : Zero or one of preceding character / expression
 * | : Logical OR over the patterns
+<br>
+
+
+### Character classes 
+* [[:print :]] - Printable
+* [[:alnum:]] - Alphanumeric
+* [[:alpha: ]] - Alphabetic
+* [[:lower :]] - Lower case
+* [[:upper :]] - Upper case
+* [[:digit:]] - Decimal digits
+* [[:blank:]] - Space / Tab
+* [[:space:]] - Whitespace
+* [[:punct :]] - Punctuation
+* [[:xdigit:]] - Hexadecimal
+* [[:graph:]] - Non-space
+* [[:cntrl:]] - Control characters
