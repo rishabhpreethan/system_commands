@@ -362,8 +362,10 @@ unset 'hash["a"]'
 * delete element with index "a"
 <br>
 
+
 # Week 3
 <br>
+
 
 ### Executing multiple commands
 >commandl; command2; command3;
@@ -378,6 +380,7 @@ unset 'hash["a"]'
 * command2 will not be executed if command1 succeeds
 <br>
 
+
 ### Running commands in subshells :
 ```
 (ls; echo $BASH_SUBSHELL; (date; echo $BASH_SUBSHELL))
@@ -389,6 +392,7 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 2                  # second subshell
 ```
 <br>
+
 
 ### File descriptors :
 <img src="/images/file_descriptors.png?raw=true" alt="File Descriptors" width="800" height="400" title="File descriptors">
@@ -428,6 +432,7 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <img src="/images/redirections1.png?raw=true" width="800" height="400">
 <br>
 
+
 #### Pipe
 > command1 | command2
 <img src="/images/|.png?raw=true" width="800" height="400">
@@ -452,9 +457,11 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 <img src="/images/tee.png?raw=true" width="800" height="400">
 <br>
 
+
 ### Package types
 <img src="/images/package_types.png?raw=true" width="800" height="400">
 <br>
+
 
 ### Type of os
 ```
@@ -462,11 +469,13 @@ lsb_release -a
 ```
 <br>
 
+
 ### Type of kernel
 ```
 uname -a
 ```
 <br>
+
 
 ### Inquiring package db
 * Search packages for a keyword:
@@ -483,6 +492,7 @@ apt-cache show -a package
 ```
 <br>
 
+
 ### Package priorities
 * required: essential to proper functioning of the system
 * important : provides functionality that enables the system to run well
@@ -491,3 +501,11 @@ apt-cache show -a package
 * extra : could conflict with packages with higher priority, has specialized requirements, install only if needed
 <br>
 
+
+### Special characters (BRE & ERE)
+* . : Any single character except null or newline
+* \* : Zero or more of the preceding character / expression
+* [] : Any of the enclosed characters; hyphen (-) indicates character range
+* ^ : Anchor for beginning of line or negation of enclosed characters
+* $ : Anchor for end of line
+* \ : Escape special characters
