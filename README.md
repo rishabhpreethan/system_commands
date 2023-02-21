@@ -540,3 +540,41 @@ apt-cache show -a package
 * [[:xdigit:]] - Hexadecimal
 * [[:graph:]] - Non-space
 * [[:cntrl:]] - Control characters
+<br>
+
+
+### BRE operator precedence
+* [..] [==] [::] char collation                 |   HIGHEST
+* \metachar                                     |
+* [ ] Bracket expansion                         |
+* \( \) \n subexpresions and backreferences     |
+* \* \{ \} Repetition of preceding              |
+single char regex                               |
+* Concatenation                                 |
+* A $ anchors                                   V   LOWEST
+<br>
+
+
+### ERE operator precedence
+* [..] [==] [::] char collation                 |   HIGHEST
+* \metachar                                     |
+* [ ] Bracket expansion                         |
+* ( ) grouping                                  |
+* + ? { } Repetition of preceding regex         |
+* Concatenation                                 |
+* A $ anchors                                   |
+* | alternation                                 V   LOWEST
+<br>
+
+
+### ed
+* Show the Prompt P
+* Command Format :                  [addr[, addr]]cmd[params]
+* commands for location :           2 $ % + ; /RE/
+* commands for editing :            f p a C d j S mu
+* exectute a shell command :        !command
+* edit a file :                     e filename
+* read file contents into buffer :  r filename
+* read command output into buffer : r ! command
+* write buffer to filename :        w filename
+* quit :                            q
