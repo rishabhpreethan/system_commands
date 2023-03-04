@@ -1,0 +1,83 @@
+nat
+hello
+rishabh
+nat
+hello
+rishabh
+nat
+hello
+rishabh
+nat
+1.  for ((i=2,j=10;i<11 && j<60; i+=2,j+=10)); do
+        echo $i,$j
+    done
+
+2.  for ((i=2,j=10 ; i<11 ; i+=2,j+=10)); do
+        echo $i,$j
+    done
+
+3.  # for ((i=2 ; i<11 ; i+=2)); do                     #wrong O/P
+    #     for ((j=10 ; j<51 ; j+=10)); do
+    #         echo $i,$j
+    #     done
+    # done
+
+4.  # for ((i=2,j=10;i<11 || j<60; )); do               #wrong O/P
+    #     echo $i,$j                                    #infinite loop
+    #     j+=10
+    # done
+
+5.  for ((i=2,j=10;i<11 || j<60; )); do
+        echo $i,$j
+        ((j+=10))
+        ((i+=2))
+    donefor i in `ls`;do
+    echo $(pwd)/$i
+donenumber=3
+if [$(number % 3) -eq 0]; then              #error
+    echo hi
+
+elif [ $((number % 3)) -eq 0 ]; then
+    echo hello
+
+elif [ $(($number % 3)) -e 0]; then
+    echo rishabh
+
+elif [number % 3 -eq 0]; then
+    echo 20
+fifor file in `ls -l * .txt`; do
+    cat $file >> ../allfiles.txt
+donels -l
+for file in `ls`; do
+    d=`ls -l $file`
+    echo $file: ${d:0:10}
+doneecho "Enter a" && read a
+echo "enter b" && read b
+echo \$$((a+b))read var
+function operate()
+{
+    temp=$1
+    temp=${temp%.*}
+    echo $temp
+}
+
+echo $(operate $var)
+
+
+# I/P:
+# 45.53
+
+# O/P:
+# 45for i in file_{A..D}{1..3}
+do
+    n=$i.txt
+    touch $n
+done1.  wc -w paragraph
+
+2.  wc -w < pragraph
+
+3.  sum=0;
+    for i in $(cat paragraph); do
+        ((sum++));
+    done;
+    echo $sum
