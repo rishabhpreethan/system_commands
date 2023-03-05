@@ -578,3 +578,149 @@ single char regex                               |
 * read command output into buffer : r ! command
 * write buffer to filename :        w filename
 * quit :                            q
+<br>
+
+
+### Shell script arguments
+* $0 : name of the shell program
+* $# : number fo arguments passed
+* $1 or !{1} : first argument
+* ${11} : eleventh argument
+* $* or $@ : all arguments at once
+* "S*" : all arguments as a single string
+* "$@" : all arguments as separate strings
+<br>
+
+
+### Command substitution
+```
+var=`command`
+```
+```
+var=$(command)
+```
+* command is executed and the output is substituted
+* Here the variable var will be assigned with that output
+<br>
+
+
+### for do loop
+```
+for var in list
+do
+    commands
+done
+```
+OR 
+```
+for var in list; do
+    commands
+done
+```
+* commands are executed once for each item in the list
+* space is the field delimiters
+* set IFS if required (field separator)
+<br>
+
+
+
+### while do loop
+```
+while condition; do
+    commands
+done
+```
+* commands are executed only if condition returns true
+<br>
+
+
+
+### until do loop
+```
+until condition; do
+    commands
+done
+```
+* commands are executed only if condition returns false
+<br>
+
+
+### switch case
+```
+case var in 
+    pattern1) commands;;
+    pattern2) commands;;
+    *) commands;;               <!-- default -->
+    esac
+```
+<br>
+
+
+### if else
+```
+if condition; then
+    commands
+fi
+```
+##### Conditions
+* test expression : ```test -e file```
+* [ exprn ] : ```[ -e file ]```
+* [[ exprn ]] : ```[ $ver == 5.* ]```
+* (( exprn )) : ```(( $v ** 2 > 10 ))```
+* command : ```wc -l file```
+* pipeline : ```who|grep "joy" > /dev/null```
+> ! : for negation
+<br>
+
+
+### Test numeric comparisons
+```$n1 -eq $n2``` : Check if n1 is equal to n2
+```$n1 -ge $n2``` : Check if n1 is greater than or equal to n2
+```$n1 -gt $n2``` : Check if n1 is greater than to n2
+```$n1 -le $n2``` : Check if n1 is lesser than orequal to n2
+```$n1 -lt $n2``` : Check if n1 is lesser than to n2
+```$n1 -ne $n2``` : Check if n1 is not equal to n2
+<br>
+
+
+### Test string comparisons
+```$str1 = $str2``` : Check if str1 is the same as str2
+```$str1 != $str2``` : Check if str1 is not the same as str2
+```$str1 < $str2``` : Check if str1 is less than str2
+```$str1 > $str2``` : Check if str1 is greater than str2
+```-n $str1``` : Check if str1 has length greater than zero
+```-z $str1``` : Check if str1 has length equal to zero
+<br>
+
+
+### Unary file comparisons
+```-e file``` : Check if the file exists
+```-d file``` : Check if the file exists and is a directory
+```-f file``` : Check if the file exists and is a file
+```-r file``` : Check if the file exists and is readable
+```-s file``` : Check if the file exists and is not empty
+```-w file``` : Check if the file exists and is writable
+```-x file``` : Check if the file exists and is executable
+```-O file``` : Check if the file exists and is owned by the current user
+```-g file``` : Check if the file exists and default group is same as that of the current user
+<br>
+
+
+### Binary file comparisons
+```file1 -nt file2``` : Check if file1 is newer than file2
+```file1 -ot file2``` : Check if file1 is older than file2
+<br>
+
+
+### Functions
+```
+myfunc()
+{
+    commands
+}
+```
+* call
+```myfunc```
+* commands are executed eachtime myfunc is called
+* definitions must be before the calls
+<br>
