@@ -674,41 +674,41 @@ fi
 
 
 ### Test numeric comparisons
-```$n1 -eq $n2``` : Check if n1 is equal to n2
-```$n1 -ge $n2``` : Check if n1 is greater than or equal to n2
-```$n1 -gt $n2``` : Check if n1 is greater than to n2
-```$n1 -le $n2``` : Check if n1 is lesser than orequal to n2
-```$n1 -lt $n2``` : Check if n1 is lesser than to n2
-```$n1 -ne $n2``` : Check if n1 is not equal to n2
+```$n1 -eq $n2``` : Check if n1 is equal to n2<br>
+```$n1 -ge $n2``` : Check if n1 is greater than or equal to n2<br>
+```$n1 -gt $n2``` : Check if n1 is greater than to n2<br>
+```$n1 -le $n2``` : Check if n1 is lesser than orequal to n2<br>
+```$n1 -lt $n2``` : Check if n1 is lesser than to n2<br>
+```$n1 -ne $n2``` : Check if n1 is not equal to n2<br>
 <br>
 
 
 ### Test string comparisons
-```$str1 = $str2``` : Check if str1 is the same as str2
-```$str1 != $str2``` : Check if str1 is not the same as str2
-```$str1 < $str2``` : Check if str1 is less than str2
-```$str1 > $str2``` : Check if str1 is greater than str2
-```-n $str1``` : Check if str1 has length greater than zero
-```-z $str1``` : Check if str1 has length equal to zero
+```$str1 = $str2``` : Check if str1 is the same as str2<br>
+```$str1 != $str2``` : Check if str1 is not the same as str2<br>
+```$str1 < $str2``` : Check if str1 is less than str2<br>
+```$str1 > $str2``` : Check if str1 is greater than str2<br>
+```-n $str1``` : Check if str1 has length greater than zero<br>
+```-z $str1``` : Check if str1 has length equal to zero<br>
 <br>
 
 
 ### Unary file comparisons
-```-e file``` : Check if the file exists
-```-d file``` : Check if the file exists and is a directory
-```-f file``` : Check if the file exists and is a file
-```-r file``` : Check if the file exists and is readable
-```-s file``` : Check if the file exists and is not empty
-```-w file``` : Check if the file exists and is writable
-```-x file``` : Check if the file exists and is executable
-```-O file``` : Check if the file exists and is owned by the current user
+```-e file``` : Check if the file exists<br>
+```-d file``` : Check if the file exists and is a directory<br>
+```-f file``` : Check if the file exists and is a file<br>
+```-r file``` : Check if the file exists and is readable<br>
+```-s file``` : Check if the file exists and is not empty<br>
+```-w file``` : Check if the file exists and is writable<br>
+```-x file``` : Check if the file exists and is executable<br>
+```-O file``` : Check if the file exists and is owned by the current user<br>
 ```-g file``` : Check if the file exists and default group is same as that of the current user
 <br>
 
 
 ### Binary file comparisons
-```file1 -nt file2``` : Check if file1 is newer than file2
-```file1 -ot file2``` : Check if file1 is older than file2
+```file1 -nt file2``` : Check if file1 is newer than file2<br>
+```file1 -ot file2``` : Check if file1 is older than file2<br>
 <br>
 
 
