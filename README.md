@@ -704,6 +704,7 @@ fi
 ```-O file``` : Check if the file exists and is owned by the current user<br>
 ```-g file``` : Check if the file exists and default group is same as that of the current user
 <br>
+<br>
 
 
 ### Binary file comparisons
@@ -724,3 +725,80 @@ myfunc()
 * commands are executed eachtime myfunc is called
 * definitions must be before the calls
 <br>
+
+
+### Debugging
+```set -x ./myscrip.sh```
+```bash -x ./myscrip.sh```
+* prints the command before executing it
+* place the set -x inside the script
+<br>
+
+
+### Combining conditions
+```[ $a -gt 3 ] && [ $a -gt 7 ]```
+```[ $a -gt 3 ] || [ $a -gt 7 ]```
+<br>
+
+
+### Shell arithmetic
+* let
+    ```let a = $1 + 5```
+* expr
+    ```expr $a +20```
+    ```b=$( expr $a +20 )```
+* $[ expression ]
+    ```$[ $a +10 ]```
+* $(( expression ))
+    ```
+    b=$(($a+10))
+    (( b++ ))
+    ```
+<br>
+
+
+### eval
+```
+eval my-arg
+```
+* execute argument as a shell command
+* combines arguments into a single string
+* returns control to the shell with exit status
+<br>
+
+
+### getopts
+```
+while getopts "ab:c" options; do
+    case "${options}" in
+        b)
+            barg=${OPTARG}
+            echo accepted; -b $barg;;
+        c)
+            carg=${OPTARG}
+            echo accepted; -b $carg;;
+        a)
+            echo accepted: -a;;
+        *)
+            echo Usage: -a -b barg -c carg;;
+    esac
+done
+```
+* this script can be invoked with only three options a,b,c
+* the options b and c will take arguments
+<br>
+
+
+### select loop
+##### Text menu
+```
+echo "select a middle one"
+select i in {1..10}; do
+    case $i in
+        1|2|3) echo you picked a small number;;
+        8|9|10) echo you pickked a big number;;
+        4|5|6|7) echo you picked the right number
+                break;;
+    esac
+echo selection completed with $i
+```
