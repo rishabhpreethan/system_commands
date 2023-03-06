@@ -802,3 +802,31 @@ select i in {1..10}; do
     esac
 echo selection completed with $i
 ```
+<br>
+
+
+
+### bash prompts
+* PS1 : primary prompt string : $
+* PS2 : secondary prompt for multi-line input : >
+* PS3 : prompt string in select loops : #?
+* PS4 : prompt string for execution trace : +
+<br>
+
+
+### Escape sequences
+* \A - Current time in 24-hour as hh:mm
+* \d - Date in "weekday month day" format
+* \h - Hostname upto first period
+* \H - Complete hostname
+* \s - Name of the shell
+* \t - Current time in 24-hour as hh:mm:ss
+* \T - Current time in 12-hour as hh:mm:ss
+* \u - Current users username
+* \w - Current directory
+* \W - Basename of current directory
+* \# - Current command number
+* \$ - if uid is 0, # else $
+* \@ - Current time in 12-hour am/pm
+* \\ - A literal \ character
+<br>
