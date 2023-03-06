@@ -827,6 +827,15 @@ echo selection completed with $i
 * \W - Basename of current directory
 * \\# - Current command number
 * \\$ - if uid is 0, # else $
-* \@ - Current time in 12-hour am/pm
+* \\@ - Current time in 12-hour am/pm
 * \\\ - A literal \ character
 <br>
+
+
+### Python command line
+* ps1 and ps2 are defined in the module sys
+* Change sys.ps1 and sys.ps2 if needed
+* Override __str__ method to have dynamic prompt
+<br>
+
+
