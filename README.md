@@ -832,7 +832,7 @@ echo selection completed with $i
 <br>
 
 
-### Python command line
+### Python command line ( >>> )
 * ps1 and ps2 are defined in the module sys
 * Change sys.ps1 and sys.ps2 if needed
 * Override __str__ method to have dynamic prompt
