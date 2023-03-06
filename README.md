@@ -825,8 +825,8 @@ echo selection completed with $i
 * \u - Current users username
 * \w - Current directory
 * \W - Basename of current directory
-* \# - Current command number
-* \$ - if uid is 0, # else $
+* \\# - Current command number
+* \\$ - if uid is 0, # else $
 * \@ - Current time in 12-hour am/pm
-* \\ - A literal \ character
+* \\\ - A literal \ character
 <br>
