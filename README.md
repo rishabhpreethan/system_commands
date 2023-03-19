@@ -849,21 +849,21 @@ echo selection completed with $i
 
 ### find
 > find [pathname] [conditions]
-* -name : pattern to match filenames
-* -type : file type code, eg - c for charater file, d for directory, l for symbolic link etc.
-* -atime : file accessed +n(more than n), -n(less than n) days ago
-* -ctime : file changed +n(more than n), -n(less than n) days ago
-* -regex : regular expression for pattern of filenames, combine with -regextype posix-basic, posix-egrep etc.
-* -exec : command to run using {} as place holder for filename
-* -print : print the full path name of matching files
+* ```-name``` : pattern to match filenames
+* ```-type``` : file type code, eg - c for charater file, d for directory, l for symbolic link etc.
+* ```-atime``` : file accessed +n(more than n), -n(less than n) days ago
+* ```-ctime``` : file changed +n(more than n), -n(less than n) days ago
+* ```-regex``` : regular expression for pattern of filenames, combine with -regextype posix-basic, posix-egrep etc.
+* ```-exec``` : command to run using {} as place holder for filename
+* ```-print``` : print the full path name of matching files
 <br>
 
 
 ### file packaging
 * deep file hierarchies
 * large number of tiny files
-* tar : collect a file hierarchy into a single file
-* gzip : compress a file
+* ```tar``` : collect a file hierarchy into a single file
+* ```gzip``` : compress a file
 * Apllications : backup, file sharing, reduce disc utilization
 <br>
 
@@ -948,9 +948,9 @@ It is a part of POSIX
 
 ### sed statements
 > :label    address pattern     action      options
-* address pattern - address, address,range, negation !
-* action - single character action, same as "ed" or "ex"
-* options - depends on the action
+* ```address pattern``` - address, address,range, negation !
+* ```action``` - single character action, same as "ed" or "ex"
+* ```options``` - depends on the action
 <br>
 
 
@@ -965,14 +965,14 @@ It is a part of POSIX
 
 
 ### actions
-* p : print the pattern space
-* d : delete the pattern space
-* s : substitute using regex match - ```s/pattern/replacement/g```
-* = : print current input line number, \n
-* \# : comment
-* i : insert above current line
-* a : append below current line
-* c : change current line
+* ```p``` : print the pattern space
+* ```d``` : delete the pattern space
+* ```s``` : substitute using regex match - ```s/pattern/replacement/g```
+* ```=``` : print current input line number, \n
+* ```#``` : comment
+* ```i``` : insert above current line
+* ```a``` : append below current line
+* ```c``` : change current line
 <br>
 
 
