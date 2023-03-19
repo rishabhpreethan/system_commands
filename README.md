@@ -839,3 +839,75 @@ echo selection completed with $i
 <br>
 
 
+### Utilities
+* find - locating files and processing them
+* tar, gzip etc - packaging collections of files
+* make - conditional actions
+<br>
+
+
+
+### find
+> find [pathname] [conditions]
+* -name : pattern to match filenames
+* -type : file type code, eg - c for charater file, d for directory, l for symbolic link etc.
+* -atime : file accessed +n(more than n), -n(less than n) days ago
+* -ctime : file changed +n(more than n), -n(less than n) days ago
+* -regex : regular expression for pattern of filenames, combine with -regextype posix-basic, posix-egrep etc.
+* -exec : command to run using {} as place holder for filename
+* -print : print the full path name of matching files
+<br>
+
+
+### file packaging
+* deep file hierarchies
+* large number of tiny files
+* tar : collect a file hierarchy into a single file
+* gzip : compress a file
+* Apllications : backup, file sharing, reduce disc utilization
+<br>
+
+
+### Possibilities
+* tar, zip
+* compress (ncompress), gzip (ncompress), bzip2 (bzip2), x2 (xz-utils), 7z (p7zip-full)
+* Tarballs like bundle.tgz for package + compress
+* Time and memory required to shrink/expand vs size ration
+* Portability
+* Unique names using timestamp, process ID etc., for backup tarballs
+<br>
+
+
+### make
+> make -f make.file
+```
+# comments
+TMP_FILES = * .o *.aux
+
+.PHONY : clean
+
+target : prerequisites
+    recipie $(OPTION_NAME)
+clean :
+    rm -f $(TMP_FILES)
+```
+<br>
+
+
+### cron
+* service to run scripts automatically at scheduled times
+* Tools : at, crontab, anacron, logrotate
+* Script locations : /etc/crontab, /etc/cron.d, /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly, /etc/cron.monthly
+<br>
+
+
+### Startup scripts
+* Startup scrpits : /etc/init/, /etc/init.d
+* Runlevel scripts
+| 0 | /etc/rc0.d | Shutdown and power off | 
+| 1 | /etc/rc1.d | Single user mode |
+| 2 | /etc/rc2.d | Non GUI multi-user mode w/o networking |
+| 3 | /etc/rc3.d | Non GUI multi-user mode with networking |
+| 4 | /etc/rc4.d | Non GUI multi-user mode for special purposes |
+| 5 | /etc/rc5.d | GUI multi-user mode with networking |
+| 6 | /etc/rc6.d | Shutdown and reboot |
