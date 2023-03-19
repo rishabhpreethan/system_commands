@@ -914,3 +914,85 @@ clean :
 | 4 | /etc/rc4.d | Non GUI multi-user mode for special purposes |
 | 5 | /etc/rc5.d | GUI multi-user mode with networking |
 | 6 | /etc/rc6.d | Shutdown and reboot |
+
+<br>
+
+
+# Stream editor sed
+<br>
+
+### Introduction
+* It is a programming language
+* sed is an abbreviation for stream editor
+It is a part of POSIX
+* sed precedes awk
+<br>
+
+
+### Execution model
+* input stream is a set of lines
+* each line is a sequence of characters
+* two data buffers are maintained: active pattern space and auxiliary hold space
+* for each line of input an execution cycle is performed loading the line into the pattern space
+* during each cycle, all the statements in the script are executed in the sequence for matching address pattern for actions specified with the options provided
+<br>
+
+
+### usage
+* single line at the command line
+```sed -e 's/hello/world/g' input.txt```
+* script interpreted by sed
+```sed -f ./myscript.sed input txt```
+<br>
+
+
+### sed statements
+> :label    address pattern     action      options
+* address pattern - address, address,range, negation !
+* action - single character action, same as "ed" or "ex"
+* options - depends on the action
+<br>
+
+
+### grouping commands
+```{ cmd; cmd; }```
+
+### address
+* selecting by numbers : ```5```, ```$```, ```%```, ```1~3```
+* selecting by text matching :  ```/regexp/```
+* range addresses : ```/regexp1/```, ```/regexp2/```, ```/regexp/, +4```, ```5,15```, ```/regexp/, ~2```, ```5, /regexp/```
+<br>
+
+
+### actions
+* p : print the pattern space
+* d : delete the pattern space
+* s : substitute using regex match - ```s/pattern/replacement/g```
+* = : print current input line number, \n
+* \# : comment
+* i : insert above current line
+* a : append below current line
+* c : change current line
+<br>
+
+
+### programming
+* ```b label``` : branch unconditionally to label
+* ```:label``` :specify location of label for branch command
+* ```N``` : add a new line to the pattern space and append next line of input into it
+* ```q``` : exit sed without processing any more commands or input lines
+* ```t label``` : branch to label only if there was a successful substitution was made
+* ```T label``` : branch to label only if there was no successful substitution was made
+* ```w filename``` : write pattern space to filename
+* ```x``` : exchange the contents fo gold and pattern spaces
+<br>
+
+
+### bash + sed
+* including sed inside shell script
+* heredoc feature
+* use with other shell scripts on command line using pipe
+<br>
+
+
+### 
