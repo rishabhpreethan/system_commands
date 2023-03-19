@@ -904,6 +904,7 @@ clean :
 ### Startup scripts
 * Startup scrpits : /etc/init/, /etc/init.d
 * Runlevel scripts
+
 | 0 | /etc/rc0.d | Shutdown and power off | 
 | 1 | /etc/rc1.d | Single user mode |
 | 2 | /etc/rc2.d | Non GUI multi-user mode w/o networking |
