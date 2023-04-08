@@ -464,7 +464,7 @@ Wednesday 15 February 2023 4:57:01 AM IST           #date
 
 
 ### Type of os
-```
+```bash
 lsb_release -a
 ```
 <br>
@@ -972,7 +972,7 @@ It is a part of POSIX
 * ```#``` : comment
 * ```i``` : insert above current line
 * ```a``` : append below current line
-* ```c``` : change current line
+* ```c``` : change/replace current line
 <br>
 
 
